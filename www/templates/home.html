@@ -1,0 +1,22 @@
+<ion-view title="Home" id="page1">
+  <ion-content padding="true" class="has-header">
+    <form id="home-form1" class="list">
+      <label class="item item-select" id="home-select1">
+        <span class="input-label">Size</span>
+        <select ng-options="size.id as size.desc for size in optionSizes" ng-model="data.size"></select>
+      </label>
+      <ion-toggle toggle-class="toggle-positive" id="home-toggle1" ng-model="data.extracheese">Extra Cheese</ion-toggle>
+      <ion-item class="item-divider" id="home-list-item-divider1"> Topping</ion-item>
+      <ion-radio id="home-radio2" ng-model="data.topping" ng-value="'pepperoni'">Pepperoni</ion-radio>
+      <ion-radio id="home-radio3" ng-model="data.topping" ng-value="'sausage'">Sausage</ion-radio>
+      <label class="item item-input" id="home-input1">
+        <span class="input-label">Note</span>
+        <input type="text" placeholder="" ng-model="data.note">
+      </label>
+    </form>
+    <div id="home-markdown1" class="show-list-numbers-and-dots">
+      <p style="color:#000000;">{{data}}</p>
+    </div>
+    <button id="home-button1" ng-click="confirmOrder()" class="button button-positive button-block">Confirm</button>
+  </ion-content>
+</ion-view>
